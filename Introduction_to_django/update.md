@@ -1,7 +1,8 @@
 from bookshelf.models import Book
 
-book = Book.objects.get(title='The Pragmatic Programmer')
-book.publication_year = 2000
+book = Book.objects.get(title='1984')
+book.title = 'Nineteen Eighty-Four'
 book.save()
 
-print("✏️ Updated book:", book)
+# ✏️ Updated book: Nineteen Eighty-Four George Orwell 1949
+

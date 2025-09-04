@@ -1,10 +1,11 @@
 from bookshelf.models import Book
 
 book = Book(
-    title='The Pragmatic Programmer',
-    author='Andrew Hunt',
-    publication_year=1999
+    title='1984',
+    author='George Orwell',
+    publication_year=1949
 )
 book.save()
 
-print("✅ Book created:", book)
+# ✅ Book created: Book object (1984)
+

@@ -1,4 +1,6 @@
 from bookshelf.models import Book
 
-book = Book.objects.get(title='The Pragmatic Programmer')
-print("📘 Retrieved book:", book)
+book = Book.objects.get(title='1984')
+print(book.title, book.author, book.publication_year)
+
+# 📘 Retrieved book: 1984 George Orwell 1949
