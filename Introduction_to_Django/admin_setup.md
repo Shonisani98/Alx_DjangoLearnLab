@@ -1,3 +1,8 @@
+# Django Admin Setup
+
+## bookshelf/admin.py
+
+```python
 from django.contrib import admin
 from .models import Book
 
