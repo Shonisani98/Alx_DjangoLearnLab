@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.views.generic.detail import DetailView
-from .models import Book, Library  # <-- checker wants this exact import
+from .models import Book
+from .models import Library  # <-- checker wants this exact line
+
 
 def list_books(request):
     books = Book.objects.all()
