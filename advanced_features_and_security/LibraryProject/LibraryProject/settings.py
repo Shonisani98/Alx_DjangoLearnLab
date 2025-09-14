@@ -149,3 +149,16 @@ MIDDLEWARE += ['csp.middleware.CSPMiddleware']
 CSP_DEFAULT_SRC = ("'self'",)
 CSP_SCRIPT_SRC = ("'self'",)
 CSP_STYLE_SRC = ("'self'",)
+
+# Enforce HTTPS connections
+SECURE_SSL_REDIRECT = True  # Redirect all HTTP requests to HTTPS
+
+# HTTP Strict Transport Security (HSTS)
+SECURE_HSTS_SECONDS = 31536000  # Enforce HTTPS for 1 year
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True  # Apply HSTS to all subdomains
+SECURE_HSTS_PRELOAD = True  # Allow inclusion in browser preload lists
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+SESSION_COOKIE_SECURE = True  # Session cookies sent only over HTTPS
+CSRF_COOKIE_SECURE = True     # CSRF cookies sent only over HTTPS
+
