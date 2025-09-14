@@ -3,5 +3,5 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-   
+    path('', include('LibraryProject.bookshelf.urls')),  # Adjust if your app is named differently
 ]
