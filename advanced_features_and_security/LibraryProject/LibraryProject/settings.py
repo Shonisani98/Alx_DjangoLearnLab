@@ -27,6 +27,19 @@ SECRET_KEY = 'django-insecure-oc17i0!=!uqze92jee2q&pl#uv9i#wogu7-n0rz&9wcq_o2uj0
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+# SECURITY SETTINGS 
+
+SECURE_BROWSER_XSS_FILTER = True  # Enable browser XSS protection
+SECURE_CONTENT_TYPE_NOSNIFF = True  # Prevent MIME type sniffing
+X_FRAME_OPTIONS = "DENY"  # Prevent clickjacking
+
+CSRF_COOKIE_SECURE = True  # CSRF cookie sent only over HTTPS
+SESSION_COOKIE_SECURE = True  # Session cookie sent only over HTTPS
+
+SECURE_SSL_REDIRECT = True  # Redirect all HTTP to HTTPS
+SECURE_HSTS_SECONDS = 31536000  # Enforce HTTPS for 1 year
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+SECURE_HSTS_PRELOAD = True
 
 
 # Application definition
@@ -129,3 +142,10 @@ STATICFILES_DIRS = []
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'bookshelf.CustomUser'
+
+INSTALLED_APPS += ['csp']
+MIDDLEWARE += ['csp.middleware.CSPMiddleware']
+
+CSP_DEFAULT_SRC = ("'self'",)
+CSP_SCRIPT_SRC = ("'self'",)
+CSP_STYLE_SRC = ("'self'",)
