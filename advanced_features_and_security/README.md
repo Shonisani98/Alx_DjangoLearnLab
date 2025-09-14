@@ -16,3 +16,24 @@ Requirement already satisfied: tzdata in c:\python313\lib\site-packages (from dj
 - : URL routing
 - : Book model
 
+# Permissions and Groups Setup
+
+## Custom Permissions
+Defined in `Book` model:
+- can_view
+- can_create
+- can_edit
+- can_delete
+
+## Groups
+- Viewers: can_view
+- Editors: can_view, can_create, can_edit
+- Admins: all permissions
+
+## Views
+Each view is protected using `@permission_required`.
+
+## Testing
+Create users and assign them to groups via Django admin. Verify access control by attempting to view, create, edit, and delete books.
+
+
