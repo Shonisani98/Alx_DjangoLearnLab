@@ -1,0 +1,28 @@
+[33mb5b3831[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m Add nested api_project with settings.py and urls.py for ALX checker
+[33m4ade92f[m Add SECURE_PROXY_SSL_HEADER to support HTTPS behind proxy
+[33m5d67eea[m Add deployment guide for HTTPS without Nginx
+[33mb0e591d[m Import ExampleForm in views.py for secure form handling
+[33mb29733c[m Add ExampleForm to forms.py for secure input handling
+[33m5728b3a[m Add and secure book_list view with can_view permission and CSRF-safe template
+[33ma56ed81[m Add README.md documenting permissions and group setup
+[33m6a19403[m Implement custom permissions and group-based access control for Book model
+[33m88da787[m Restructure project to match LibraryProject/LibraryProject/settings.py requirement
+[33me3e4589[m Fix bookshelf app path and config for Django import resolution
+[33m8b2a7b4[m Add and integrate custom user model with profile photo and date of birth
+[33m731ea0a[m Add custom user model, manager, and admin integration
+[33mac236b0[m Fix TEMPLATES config using pathlib and clean BASE_DIR definition
+[33m8a42ecd[m Add custom permissions and secure views for Book model in relationship_app
+[33mbd47953[m Implement custom permissions and secured views for Book model in relationship_app
+[33m27948ee[m Task 3: Added UserProfile model with role field and predefined choices
+[33mee1acec[m Task 3: Implemented role-based access control with UserProfile, views, and templates
+[33m0cac4be[m Task 2: Renamed register_view to register for checker compliance
+[33m43e76a0[m Task 2: Added register.html template for user registration
+[33m67bdd46[m Fix: Merged all urlpatterns into one block for checker compliance
+[33m54323d2[m Task 2: Added LoginView and LogoutView for checker compliance
+[33mbde99b3[m Task 2: Added user authentication views, templates, and static files
+[33m4b39c6c[m Fix: Added explicit 'from .models import Library' for checker compliance
+[33mf35c3f9[m Fix: Updated LibraryDetailView for checker compliance with template name, context, and import
+[33mf4880c4[m Fix: Updated list_books view to include Book.objects.all() for checker compliance
+[33ma82ce4d[m Task 1: Implemented function-based and class-based views with templates and URL routing in relationship_app
+[33mdbdc7c4[m Task 0: Defined advanced model relationships and sample queries in relationship_app
+[33m3162bcc[m Reinitialized repo and committed relationship_app
