@@ -72,7 +72,6 @@ TEMPLATES = [
 ]
 
 
-WSGI_APPLICATION = 'LibraryProject.wsgi.application'
 WSGI_APPLICATION = 'api_project.wsgi.application'
 
 
