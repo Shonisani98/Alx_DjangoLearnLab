@@ -53,13 +53,11 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'django_models.urls'
 
-import os
-
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'relationship_app' / 'templates'],
+        'DIRS': [BASE_DIR / 'relationship_app' / 'templates' / 'relationship_app'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -71,6 +69,7 @@ TEMPLATES = [
         },
     },
 ]
+
 
 
 
