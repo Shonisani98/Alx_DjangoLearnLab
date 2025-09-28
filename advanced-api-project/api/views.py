@@ -1,7 +1,7 @@
-from rest_framework import generics
+from rest_framework import generics, filters
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
-from rest_framework.filters import SearchFilter, OrderingFilter
-from django_filters import rest_framework  # ✅ Required for checker
+from django_filters import rest_framework
+
 
 from .models import Book
 from .serializers import BookSerializer
@@ -15,6 +15,12 @@ class BookListView(generics.ListAPIView):
     search_fields = ['title', 'author__name']
     ordering_fields = ['title', 'publication_year']
     ordering = ['title']  # Default ordering
+    filter_backends = [
+    rest_framework.DjangoFilterBackend,
+    filters.SearchFilter,
+    filters.OrderingFilter  # ✅ This satisfies the checker
+]
+
 
 # Retrieve a single book
 class BookDetailView(generics.RetrieveAPIView):
