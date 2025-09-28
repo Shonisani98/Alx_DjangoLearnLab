@@ -1,7 +1,7 @@
 from rest_framework import generics, filters
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
 from django_filters import rest_framework
-
+from django_filters.rest_framework import DjangoFilterBackend
 
 from .models import Book
 from .serializers import BookSerializer
@@ -51,3 +51,8 @@ permission_classes = [IsAdminOrReadOnly]
 # - Filtering by title, author name, and publication year
 # - Searching by title and author name
 # - Ordering by title and publication year
+filter_backends = [
+    DjangoFilterBackend,
+    filters.SearchFilter,
+    filters.OrderingFilter
+]
