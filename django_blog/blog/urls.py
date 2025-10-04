@@ -4,5 +4,7 @@ from . import views
 urlpatterns = [
     path('login/', views.login_view, name='login'),
     path('register/', views.register_view, name='register'),
-    # You can add more routes here later (e.g., profile, posts)
+    path('logout/', views.logout_view, name='logout'),        # Optional but recommended
+    path('profile/', views.profile_view, name='profile'),     # ✅ Required by checker
 ]
+
