@@ -1,7 +1,7 @@
 from django.urls import path
-from .views import like_post, unlike_post
+from .views import LikePostView, UnlikePostView
 
 urlpatterns = [
-    path('<int:pk>/like/', like_post),
-    path('<int:pk>/unlike/', unlike_post),
+    path('<int:pk>/like/', LikePostView.as_view(), name='like-post'),
+    path('<int:pk>/unlike/', UnlikePostView.as_view(), name='unlike-post'),
 ]
