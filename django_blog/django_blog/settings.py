@@ -73,9 +73,7 @@ WSGI_APPLICATION = 'django_blog.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
-Checks for database configuration
 
-django_blog/settings.py doesn't contain: ["USER", "PORT"]
 
 
 # Password validation
